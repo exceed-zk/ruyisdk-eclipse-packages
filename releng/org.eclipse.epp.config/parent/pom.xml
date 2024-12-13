@@ -311,9 +311,9 @@
             <products>
               <product>
                 <id>${project.artifactId}</id>
-                <rootFolder>eclipse</rootFolder>
+                <rootFolder>ruyisdk</rootFolder>
                 <rootFolders>
-                  <macosx>Eclipse.app</macosx>
+                  <macosx>RuyiSDK.app</macosx>
                 </rootFolders>
                 <!--<archiveFileName>eclipse-${eclipse.epp.id}-${eclipse.simultaneous.release.id}</archiveFileName>-->
                 <archiveFileName>ruyisdk-V0.0.1</archiveFileName>
