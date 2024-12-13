@@ -42,14 +42,14 @@
       </vmArgsWin>
    </launcherArgs>
 
-   <windowImages i16="/org.eclipse.epp.package.embedcpp/eclipse16.png" i32="/org.eclipse.epp.package.embedcpp/eclipse32.png" i48="/org.eclipse.epp.package.embedcpp/eclipse48.png" i256="/org.eclipse.epp.package.embedcpp/eclipse256.png"/>
+   <windowImages i16="/org.eclipse.epp.package.embedcpp/ruyisdk16.png" i32="/org.eclipse.epp.package.embedcpp/ruyisdk32.png" i48="/org.eclipse.epp.package.embedcpp/ruyisdk48.png" i256="/org.eclipse.epp.package.embedcpp/ruyisdk256.png"/>
 
    <splash
       location="org.eclipse.epp.package.common"
       startupProgressRect="2,290,448,10"
       startupMessageRect="7,265,320,20"
       startupForegroundColor="ffffff" />
-   <launcher name="eclipse">
+   <launcher name="ruyisdk">
       <linux icon="../../icons/icon.xpm"/>
       <macosx icon="../../icons/Eclipse.icns">
          <bundleUrlTypes>
@@ -69,22 +69,6 @@
       <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21</macos>
       <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21</windows>
    </vm>
-
-   <configurations>
-      <plugin id="org.apache.aries.spifly.dynamic.bundle" autoStart="true" startLevel="2" />
-      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
-      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="4" />
-      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
-      <plugin id="slf4j.simple" autoStart="true" startLevel="2" />
-      <property name="org.eclipse.update.reconcile" value="false" />
-      <property name="eclipse.buildId" value="${unqualifiedVersion}.${buildQualifier}" />
-      <property name="osgi.bundles.defaultStartLevel" value="4" />
-      <property name="osgi.instance.area.default" value="@user.home/workspace" />
-      <property name="osgi.instance.area.default" value="@user.home/Documents/workspace" os="macosx" />
-   </configurations>
 
    <license>
         <url>http://eclipse.org/legal/epl/notice.php</url>
@@ -232,10 +216,11 @@ United States, other countries, or both.
          </text>
    </license>
 
+   <plugins>
+      <plugin id="slf4j.simple"/>
+   </plugins>
+
    <features>
-
-
-      <!-- common features that all products have -->
       <feature id="org.eclipse.epp.package.common.feature" version="4.34.0.qualifier"/>
       <feature id="org.eclipse.platform" installMode="root"/>
       <feature id="org.eclipse.epp.mpc" installMode="root"/>
@@ -247,8 +232,6 @@ United States, other countries, or both.
       <feature id="org.eclipse.mylyn.wikitext.feature" installMode="root"/>
       <feature id="org.eclipse.tm4e.feature" installMode="root"/>
       <feature id="org.eclipse.tm4e.language_pack.feature" installMode="root"/>
-
-      <!-- common features to almost all products -->
       <feature id="org.eclipse.mylyn.commons.activity.feature" installMode="root"/>
       <feature id="org.eclipse.mylyn.egit.feature" installMode="root"/>
       <feature id="org.eclipse.mylyn.ide.feature" installMode="root"/>
@@ -256,8 +239,6 @@ United States, other countries, or both.
       <feature id="org.eclipse.mylyn.github.feature" installMode="root"/>
       <feature id="org.eclipse.mylyn.jenkins.feature" installMode="root"/>
       <feature id="org.eclipse.mylyn.reviews.feature" installMode="root"/>
-
-      <!-- product specific contents -->
       <feature id="org.eclipse.epp.package.embedcpp.feature" version="4.34.0.qualifier"/>
       <feature id="org.eclipse.cdt" installMode="root"/>
       <feature id="org.eclipse.cdt.autotools" installMode="root"/>
@@ -303,14 +284,33 @@ United States, other countries, or both.
       <feature id="org.eclipse.embedcdt.templates.xpack" installMode="root"/>
       <feature id="org.eclipse.mylyn.cdt.feature" installMode="root"/>
    </features>
-   <plugins>
-      <!-- either m2e.logback or slf4j.simple should be provided in each package -->
-      <plugin id="slf4j.simple"/>
-   </plugins>
+
+   <configurations>
+      <plugin id="org.apache.aries.spifly.dynamic.bundle" autoStart="true" startLevel="2" />
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="slf4j.simple" autoStart="true" startLevel="2" />
+      <property name="org.eclipse.update.reconcile" value="false" />
+      <property name="eclipse.buildId" value="${unqualifiedVersion}.${buildQualifier}" />
+      <property name="osgi.bundles.defaultStartLevel" value="4" />
+      <property name="osgi.instance.area.default" value="@user.home/workspace" />
+      <property name="osgi.instance.area.default" value="@user.home/Documents/workspace" os="macosx" />
+   </configurations>
 
    <repositories>
       <repository location="https://download.eclipse.org/eclipse/updates/4.34" name="The Eclipse Project Updates" enabled="true" />
       <repository location="https://download.eclipse.org/releases/2024-12" name="2024-12" enabled="true" />
    </repositories>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>
