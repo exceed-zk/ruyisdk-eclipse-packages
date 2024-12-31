@@ -145,7 +145,7 @@
               <ws>gtk</ws>
               <arch>riscv64</arch>
             </environment>
-            <!--<environment>
+           <!-- <environment>
               <os>win32</os>
               <ws>win32</ws>
               <arch>x86_64</arch>
@@ -316,7 +316,7 @@
                   <macosx>RuyiSDK.app</macosx>
                 </rootFolders>
                 <!--<archiveFileName>eclipse-${eclipse.epp.id}-${eclipse.simultaneous.release.id}</archiveFileName>-->
-                <archiveFileName>ruyisdk-V0.0.1</archiveFileName>
+                <archiveFileName>ruyisdk-V0.0.2</archiveFileName>
               </product>
             </products>
             <profile>${project.artifactId}</profile>
