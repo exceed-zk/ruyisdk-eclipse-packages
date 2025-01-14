@@ -316,7 +316,7 @@
                   <macosx>RuyiSDK.app</macosx>
                 </rootFolders>
                 <!--<archiveFileName>eclipse-${eclipse.epp.id}-${eclipse.simultaneous.release.id}</archiveFileName>-->
-                <archiveFileName>ruyisdk-V0.0.2</archiveFileName>
+                <archiveFileName>ruyisdk-0.0.3</archiveFileName>
               </product>
             </products>
             <profile>${project.artifactId}</profile>
