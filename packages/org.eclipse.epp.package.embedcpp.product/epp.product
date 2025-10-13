@@ -283,6 +283,7 @@ United States, other countries, or both.
       <feature id="org.eclipse.embedcdt.templates.sifive" installMode="root"/>
       <feature id="org.eclipse.embedcdt.templates.xpack" installMode="root"/>
       <feature id="org.eclipse.mylyn.cdt.feature" installMode="root"/>
+      <feature id="org.ruyisdk.feature" installMode="root"/>
    </features>
 
    <configurations>

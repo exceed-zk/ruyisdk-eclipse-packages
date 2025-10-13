@@ -60,6 +60,8 @@
     <justj.epp.repository>https://download.eclipse.org/justj/epp/milestone/latest</justj.epp.repository> <!-- Keep URL in sync with Oomph setup-->
     <!-- The Justj execution enviroment for the target-platform-configuration. -->
     <execution.environment>org.eclipse.justj.openjdk.hotspot.jre.full-${execution.environment.version}</execution.environment>
+    <!-- RuyiSDK plugins repository URL - can be overridden via command line with -Druyisdk.plugins.repository=... -->
+    <ruyisdk.plugins.repository>file://${project.basedir}/../../../plugins/ruyisdk-eclipse-plugins/repository/target/repository</ruyisdk.plugins.repository>
   </properties>
 
   <prerequisites>
@@ -113,6 +115,12 @@
       -->
       <id>maven-ant-repository2</id>
       <url>https://repo.eclipse.org/content/repositories/orbit-approved-artifacts</url>
+    </repository>
+    <repository>
+      <!-- RuyiSDK custom plugins repository -->
+      <id>ruyisdk-plugins</id>
+      <url>${ruyisdk.plugins.repository}</url>
+      <layout>p2</layout>
     </repository>
   </repositories>
 
