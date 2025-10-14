@@ -1,20 +1,89 @@
+# ============================================
+# Eclipse Packaging Project (EPP) - Git Ignore
+# ============================================
+
+# Temporary Files
 *~
 *.bak
+*.swp
+*.tmp
+
+# OS Specific Files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+Desktop.ini
+
+# Maven Build Output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Eclipse/Tycho Build
 bin/
 bin/**
+.tycho-consumer-pom.xml
+build.log
+workspace/
+
+# EPP Specific
+/archive
+email.txt
+
+# CVS (Legacy)
 /CVS/*
 */CVS/*
 .cvsignore
 */.cvsignore
-.DS_Store*
-ehthumbs.db
-Icon?
-*.swp
-Thumbs.db
-*.tmp
-target/
-/archive
-email.txt
-workspace/
-build.log
-.tycho-consumer-pom.xml
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+.recommenders/
+.loadpath
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# Test Output
+test-output/
+*.test
+
+# Logs
+*.log
+
+# Compiled Files
+*.class
+
+# Package Files (if generated locally)
+# Note: EPP packages are usually in archive/ which is already ignored
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Exclude JARs in specific directories (if any are required)
+# !lib/*.jar
+
+# SonarQube
+.sonar/
+
+# Documentation Build
+docs/_build/
