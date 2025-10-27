@@ -18,3 +18,7 @@ email.txt
 workspace/
 build.log
 .tycho-consumer-pom.xml
+
+# IDE generated files
+.settings/
+.project
